@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Login - LoanAI{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 gradient-bg rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">Welcome Back</h2>
+            <p class="mt-2 text-gray-600">Login to access your dashboard</p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <form method="POST" action="/login" class="space-y-6"></form>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address
+                    </label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="your@email.com"
+                        data-testid="login-email"
+                    >
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                        Password
+                    </label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="••••••••"
+                        data-testid="login-password"
+                    >
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input
+                            id="remember"
+                            name="remember"
+                            type="checkbox"
+                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                        >
+                        <label for="remember" class="ml-2 block text-sm text-gray-700">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <div id="error-message" class="hidden p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm"></div>
+
+                <button
+                    type="submit"
+                    class="w-full py-3 gradient-bg text-white rounded-lg font-semibold hover:shadow-lg transition transform hover:scale-105"
+                    data-testid="login-submit-button"
+                >
+                    Sign In
+                </button>
+            </form>
+
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Don't have an account?
+                    <a href="/register" class="font-medium text-indigo-600 hover:text-indigo-500">
+                        Sign up now
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+            <div>
+                <div class="text-2xl font-bold text-indigo-600">2 Min</div>
+                <div class="text-xs text-gray-600">Fast Login</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-indigo-600">100%</div>
+                <div class="text-xs text-gray-600">Secure</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-indigo-600">24/7</div>
+                <div class="text-xs text-gray-600">Support</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

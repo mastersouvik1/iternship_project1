@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="relative z-10 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+            <div>
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+                    Your Loan History
+                </h1>
+                <p class="text-gray-300">Track all your loan applications and predictions</p>
+            </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left">
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-200 border-b border-white/10">Date</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-200 border-b border-white/10">Income</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-200 border-b border-white/10">Loan Amount</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-200 border-b border-white/10">Status</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-200 border-b border-white/10">Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-300 border-b border-white/5">
+                                Jan 15, 2024
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $5,000
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $150,000
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <span class="status-approved inline-block px-3 py-1 rounded-full text-xs font-semibold">
+                                    Approved
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm font-medium text-white">92%</span>
+                                    <div class="confidence-bar w-24">
+                                        <div class="confidence-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-300 border-b border-white/5">
+                                Jan 12, 2024
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $3,200
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $200,000
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <span class="status-rejected inline-block px-3 py-1 rounded-full text-xs font-semibold">
+                                    Rejected
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm font-medium text-white">34%</span>
+                                    <div class="confidence-bar w-24">
+                                        <div class="confidence-fill" style="width: 34%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-300 border-b border-white/5">
+                                Jan 08, 2024
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $6,500
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $120,000
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <span class="status-approved inline-block px-3 py-1 rounded-full text-xs font-semibold">
+                                    Approved
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm font-medium text-white">88%</span>
+                                    <div class="confidence-bar w-24">
+                                        <div class="confidence-fill" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-300 border-b border-white/5">
+                                Jan 03, 2024
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $4,800
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium border-b border-white/5">
+                                $95,000
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <span class="status-approved inline-block px-3 py-1 rounded-full text-xs font-semibold">
+                                    Approved
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 border-b border-white/5">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm font-medium text-white">95%</span>
+                                    <div class="confidence-bar w-24">
+                                        <div class="confidence-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-300">
+                                Dec 28, 2023
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium">
+                                $2,900
+                            </td>
+                            <td class="px-6 py-4 text-sm text-white font-medium">
+                                $180,000
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="status-rejected inline-block px-3 py-1 rounded-full text-xs font-semibold">
+                                    Rejected
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm font-medium text-white">41%</span>
+                                    <div class="confidence-bar w-24">
+                                        <div class="confidence-fill" style="width: 41%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
